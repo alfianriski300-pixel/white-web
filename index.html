@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE WHITE WEB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOAST NOTIFIKASI -->
+    <div id="toastNotification" class="toast">Produk berhasil ditambahkan ke keranjang!</div>
+
+    <header class="header">
+        <div class="nav-container">
+            <div class="brand"><em>WHITE.WEB</em></div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" data-page="home" class="nav-link active">Home</a></li>
+                    <li><a href="#" data-page="about" class="nav-link">About</a></li>
+                    <li><a href="#" data-page="visi-misi" class="nav-link">Visi Misi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+
+        <!-- HALAMAN HOME -->
+        <section id="home-page" class="page-section active">
+            <div class="filter-wrapper">
+                <input type="text" id="searchInput" placeholder="Cari produk...">
+
+                <div class="filter-buttons">
+                    <button class="btn-filter active" data-category="all">SEMUA</button>
+                    <button class="btn-filter" data-category="mobilkeluarga">MOBIL KELUARGA</button>
+                    <button class="btn-filter" data-category="sedan">SEDAN</button>
+                    <button class="btn-filter" data-category="sport">SPORT</button>
+                    <button class="btn-filter" data-category="hyper">HYPER</button>
+                    <button class="btn-filter" data-category="hybrid">HYBRID</button>
+                    <button class="btn-filter" data-category="jdm">JDM</button>
+                    <button class="btn-filter nav-link" data-page="dongo">1-5JT</button>
+                    <button class="btn-filter" data-category="10-150jt">10-150JT</button>
+                    <button class="btn-filter" data-category="150-900jt">150-900JT</button>
+                    <button class="btn-filter" data-category="900-2m">900-2M</button>
+                    <button class="btn-filter" data-category="2m-100m">2M-100M</button>
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+
+                <div class="product-card" data-category="sedan 900-2m" data-id="car-01"
+                    data-name="BMW 218i COUPE SPORT M2" data-price="1453000000">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500" alt="car-foto">
+                    <h3>BMW 218i COUPE SPORT M2</h3>
+                    <p class="text-ket">Coupe 2 pintu yang kecil, sporty dan enak buat harian...</p>
+                    <p class="price">RP 1,453,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmw218i">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 900-2m" data-id="car-02" data-name="PORSCHE 718 CAIMAN"
+                    data-price="1850000000">
+                    <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=500" alt="car-foto">
+                    <h3>PORSCHE 718 CAIMAN</h3>
+                    <p class="text-ket">Sports car mid-engine dengan penanganan presisi tinggi...</p>
+                    <p class="price">RP 1,850,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="porsche718">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="jdm 150-900jt" data-id="car-03" data-name="NISSAN SILVIA S15"
+                    data-price="850000000">
+                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=500" alt="car-foto">
+                    <h3>NISSAN SILVIA S15</h3>
+                    <p class="text-ket">Ikon JDM legendaris dengan mesin SR20DET turbocharge...</p>
+                    <p class="price">RP 850,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="nissans15">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <!-- meta ai produk -->
+
+                <div class="product-card" data-category="sport 2m-100m" data-id="car-01" data-name="PORSCHE 911 CARRERA"
+                    data-price="2750000000">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500" alt="car-foto">
+                    <h3>PORSCHE 911 CARRERA</h3>
+                    <p class="text-ket">Ikon sports car dengan mesin boxer 6 silinder dan handling legendaris...</p>
+                    <p class="price">RP 2,750,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="porsche911">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 900-2m" data-id="car-02" data-name="PORSCHE 718 CAIMAN"
+                    data-price="1850000000">
+                    <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=500" alt="car-foto">
+                    <h3>PORSCHE 718 CAIMAN</h3>
+                    <p class="text-ket">Sports car mid-engine dengan penanganan presisi tinggi...</p>
+                    <p class="price">RP 1,850,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="porsche718">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport hyper 2m-100m" data-id="car-03"
+                    data-name="LAMBORGHINI HURACAN EVO" data-price="8950000000">
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=500" alt="car-foto">
+                    <h3>LAMBORGHINI HURACAN EVO</h3>
+                    <p class="text-ket">V10 5.2L naturally aspirated, 640 HP dengan aerodinamika agresif...</p>
+                    <p class="price">RP 8,950,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="huracan">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport hyper 2m-100m" data-id="car-04"
+                    data-name="FERRARI 488 GTB" data-price="9850000000">
+                    <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=500" alt="car-foto">
+                    <h3>FERRARI 488 GTB</h3>
+                    <p class="text-ket">V8 twin-turbo 661 HP, 0-100 km/jam hanya 3 detik...</p>
+                    <p class="price">RP 9,850,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="ferrari488">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport hyper 2m-100m" data-id="car-05" data-name="MCLAREN 720S"
+                    data-price="9750000000">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=500" alt="car-foto">
+                    <h3>MCLAREN 720S</h3>
+                    <p class="text-ket">Super car carbon monocoque, V8 twin-turbo 710 HP super ringan...</p>
+                    <p class="price">RP 9,750,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="mclaren720s">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 2m-100m" data-id="car-06" data-name="AUDI R8 V10"
+                    data-price="7450000000">
+                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=500" alt="car-foto">
+                    <h3>AUDI R8 V10</h3>
+                    <p class="text-ket">V10 5.2L quattro AWD, suara mesin yang jadi ciri khas...</p>
+                    <p class="price">RP 7,450,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="audir8">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport jdm 2m-100m" data-id="car-07" data-name="NISSAN GT-R R35"
+                    data-price="3750000000">
+                    <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=500" alt="car-foto">
+                    <h3>NISSAN GT-R R35</h3>
+                    <p class="text-ket">Godzilla, V6 twin-turbo 565 HP dengan AWD paling brutal...</p>
+                    <p class="price">RP 3,750,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="gtr35">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport sedan 2m-100m" data-id="car-08"
+                    data-name="BMW M4 COMPETITION" data-price="2450000000">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500" alt="car-foto">
+                    <h3>BMW M4 COMPETITION</h3>
+                    <p class="text-ket">Inline-6 twin-turbo 510 HP, coupe agresif khas M Power...</p>
+                    <p class="price">RP 2,450,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmwm4">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 2m-100m" data-id="car-09" data-name="MERCEDES-AMG GT"
+                    data-price="3950000000">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500" alt="car-foto">
+                    <h3>MERCEDES-AMG GT</h3>
+                    <p class="text-ket">V8 bi-turbo handcrafted AMG, desain long bonnet klasik...</p>
+                    <p class="price">RP 3,950,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="amggt">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 900-2m" data-id="car-10" data-name="FORD MUSTANG GT"
+                    data-price="1650000000">
+                    <img src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?w=500" alt="car-foto">
+                    <h3>FORD MUSTANG GT</h3>
+                    <p class="text-ket">Muscle car V8 5.0L 450 HP, suara garang khas Amerika...</p>
+                    <p class="price">RP 1,650,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="mustanggt">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 2m-100m" data-id="car-11"
+                    data-name="CHEVROLET CORVETTE C8" data-price="2950000000">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=500" alt="car-foto">
+                    <h3>CHEVROLET CORVETTE C8</h3>
+                    <p class="text-ket">Mid-engine pertama Corvette, V8 6.2L 495 HP...</p>
+                    <p class="price">RP 2,950,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="corvettec8">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport jdm 900-2m" data-id="car-12" data-name="TOYOTA SUPRA GR"
+                    data-price="1350000000">
+                    <img src="https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?w=500" alt="car-foto">
+                    <h3>TOYOTA SUPRA GR</h3>
+                    <p class="text-ket">Inline-6 turbo 387 HP, legenda JDM yang lahir kembali...</p>
+                    <p class="price">RP 1,350,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="supragr">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 2m-100m" data-id="car-13" data-name="LOTUS EMIRA"
+                    data-price="2850000000">
+                    <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?w=500" alt="car-foto">
+                    <h3>LOTUS EMIRA</h3>
+                    <p class="text-ket">Sports car Inggris super ringan, handling paling fun...</p>
+                    <p class="price">RP 2,850,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="lotusemira">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 2m-100m" data-id="car-14" data-name="JAGUAR F-TYPE R"
+                    data-price="3250000000">
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=500" alt="car-foto">
+                    <h3>JAGUAR F-TYPE R</h3>
+                    <p class="text-ket">V8 supercharged 575 HP, knalpot paling merdu...</p>
+                    <p class="price">RP 3,250,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="jaguarftype">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 2m-100m" data-id="car-15"
+                    data-name="ASTON MARTIN VANTAGE" data-price="4950000000">
+                    <img src="https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?w=500" alt="car-foto">
+                    <h3>ASTON MARTIN VANTAGE</h3>
+                    <p class="text-ket">V8 twin-turbo 510 HP, mobilnya James Bond...</p>
+                    <p class="price">RP 4,950,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="astonvantage">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sedan sport 2m-100m" data-id="car-16"
+                    data-name="BENTLEY CONTINENTAL GT" data-price="6750000000">
+                    <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?w=500" alt="car-foto">
+                    <h3>BENTLEY CONTINENTAL GT</h3>
+                    <p class="text-ket">W12 6.0L 650 HP, mewah tapi kencang...</p>
+                    <p class="price">RP 6,750,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bentleygt">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport hyper 2m-100m" data-id="car-17" data-name="MASERATI MC20"
+                    data-price="8950000000">
+                    <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16?w=500" alt="car-foto">
+                    <h3>MASERATI MC20</h3>
+                    <p class="text-ket">V6 Nettuno 630 HP, teknologi F1 di jalan raya...</p>
+                    <p class="price">RP 8,950,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="maseratimc20">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sedan hybrid sport 2m-100m" data-id="car-18"
+                    data-name="PORSCHE TAYCAN TURBO S" data-price="3450000000">
+                    <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=500" alt="car-foto">
+                    <h3>PORSCHE TAYCAN TURBO S</h3>
+                    <p class="text-ket">Listrik 750 HP, 0-100 km/jam 2.8 detik, tanpa suara...</p>
+                    <p class="price">RP 3,450,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="taycan">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sedan hybrid 2m-100m" data-id="car-19"
+                    data-name="TESLA MODEL S PLAID" data-price="2250000000">
+                    <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=500" alt="car-foto">
+                    <h3>TESLA MODEL S PLAID</h3>
+                    <p class="text-ket">Tri-motor listrik 1020 HP, akselerasi paling gila...</p>
+                    <p class="price">RP 2,250,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="teslaplaid">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport 900-2m" data-id="car-20" data-name="DODGE CHALLENGER SRT"
+                    data-price="1950000000">
+                    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=500" alt="car-foto">
+                    <h3>DODGE CHALLENGER SRT</h3>
+                    <p class="text-ket">V8 HEMI supercharged 717 HP, muscle car sejati...</p>
+                    <p class="price">RP 1,950,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="challenger">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport jdm 150-900jt" data-id="car-21" data-name="SUBARU BRZ"
+                    data-price="895000000">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=500" alt="car-foto">
+                    <h3>SUBARU BRZ</h3>
+                    <p class="text-ket">Boxer 2.4L RWD, mobil drift paling fun buat pemula...</p>
+                    <p class="price">RP 895,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="subarubrz">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sport jdm 150-900jt" data-id="car-22"
+                    data-name="MAZDA MX-5 MIATA" data-price="775000000">
+                    <img src="https://images.unsplash.com/photo-1621135802920-133df287f89c?w=500" alt="car-foto">
+                    <h3>MAZDA MX-5 MIATA</h3>
+                    <p class="text-ket">Roadster ringan legendaris, fun to drive nomor satu...</p>
+                    <p class="price">RP 775,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="miata">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sedan jdm 900-2m" data-id="car-23"
+                    data-name="HONDA CIVIC TYPE R" data-price="1250000000">
+                    <img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?w=500" alt="car-foto">
+                    <h3>HONDA CIVIC TYPE R</h3>
+                    <p class="text-ket">2.0L turbo 330 HP, FWD tercepat di Nurburgring...</p>
+                    <p class="price">RP 1,250,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="typer">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sedan sport 2m-100m" data-id="car-24"
+                    data-name="AUDI RS7 SPORTBACK" data-price="3150000000">
+                    <img src="https://images.unsplash.com/photo-1614026480209-cd9934144671?w=500" alt="car-foto">
+                    <h3>AUDI RS7 SPORTBACK</h3>
+                    <p class="text-ket">V8 bi-turbo 630 HP, sedan 4 pintu rasa supercar...</p>
+                    <p class="price">RP 3,150,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="audirs7">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sedan sport 2m-100m" data-id="car-25"
+                    data-name="BMW M8 GRAN COUPE" data-price="3850000000">
+                    <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=500" alt="car-foto">
+                    <h3>BMW M8 GRAN COUPE</h3>
+                    <p class="text-ket">V8 twin-turbo 617 HP, flagship M paling mewah...</p>
+                    <p class="price">RP 3,850,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmwm8">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hyper hybrid 2m-100m" data-id="car-26"
+                    data-name="MERCEDES-AMG ONE" data-price="45000000000">
+                    <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=500" alt="car-foto">
+                    <h3>MERCEDES-AMG ONE</h3>
+                    <p class="text-ket">Mesin F1 asli di jalan raya, 1063 HP hybrid...</p>
+                    <p class="price">RP 45,000,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="amgone">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hyper hybrid 2m-100m" data-id="car-27"
+                    data-name="FERRARI SF90 STRADALE" data-price="15500000000">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=500" alt="car-foto">
+                    <h3>FERRARI SF90 STRADALE</h3>
+                    <p class="text-ket">Hybrid V8 1000 HP, Ferrari paling kencang yang pernah dibuat...</p>
+                    <p class="price">RP 15,500,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="sf90">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hyper sport 2m-100m" data-id="car-28"
+                    data-name="LAMBORGHINI AVENTADOR SVJ" data-price="12500000000">
+                    <img src="https://images.unsplash.com/photo-1519245659620-e859806a8d3b?w=500" alt="car-foto">
+                    <h3>LAMBORGHINI AVENTADOR SVJ</h3>
+                    <p class="text-ket">V12 6.5L 770 HP, raja Nurburgring...</p>
+                    <p class="price">RP 12,500,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="aventador">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hyper 2m-100m" data-id="car-29" data-name="BUGATTI CHIRON"
+                    data-price="55000000000">
+                    <img src="https://images.unsplash.com/photo-1605515298946-d664fc23fe19?w=500" alt="car-foto">
+                    <h3>BUGATTI CHIRON</h3>
+                    <p class="text-ket">W16 quad-turbo 1500 HP, top speed 440 km/jam...</p>
+                    <p class="price">RP 55,000,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="chiron">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hyper 2m-100m" data-id="car-30" data-name="KOENIGSEGG JESKO"
+                    data-price="48000000000">
+                    <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?w=500" alt="car-foto">
+                    <h3>KOENIGSEGG JESKO</h3>
+                    <p class="text-ket">V8 twin-turbo 1600 HP, hypercar Swedia paling ekstrem...</p>
+                    <p class="price">RP 48,000,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="jesko">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <!-- BMW KELUARGA + HYBRID -->
+
+                <div class="product-card" data-category="mobilkeluarga 150-900jt" data-id="car-31"
+                    data-name="BMW X1 SDRIVE18I" data-price="890000000">
+                    <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=500" alt="car-foto">
+                    <h3>BMW X1 SDRIVE18I</h3>
+                    <p class="text-ket">SUV kompak keluarga, irit, 1.5L turbo 156 HP, cocok harian...</p>
+                    <p class="price">RP 890,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmwx1">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mobilkeluarga 900-2m" data-id="car-32"
+                    data-name="BMW X3 XDRIVE30I" data-price="1150000000">
+                    <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=500" alt="car-foto">
+                    <h3>BMW X3 XDRIVE30I</h3>
+                    <p class="text-ket">SUV keluarga 2.0L turbo 252 HP, bagasi luas, nyaman jauh...</p>
+                    <p class="price">RP 1,150,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmwx3">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mobilkeluarga 2m-100m" data-id="car-33"
+                    data-name="BMW X5 XDRIVE40I" data-price="2150000000">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500" alt="car-foto">
+                    <h3>BMW X5 XDRIVE40I</h3>
+                    <p class="text-ket">SUV bongsor 7 seater, 3.0L 381 HP, mewah buat keluarga besar...</p>
+                    <p class="price">RP 2,150,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmwx5">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mobilkeluarga 2m-100m" data-id="car-34"
+                    data-name="BMW X7 XDRIVE40I" data-price="2850000000">
+                    <img src="https://images.unsplash.com/photo-1614026480209-cd9934144671?w=500" alt="car-foto">
+                    <h3>BMW X7 XDRIVE40I</h3>
+                    <p class="text-ket">Flagship SUV 7 seater, paling mewah di kelasnya...</p>
+                    <p class="price">RP 2,850,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmwx7">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sedan 900-2m" data-id="car-35" data-name="BMW 320I M SPORT"
+                    data-price="1085000000">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=500" alt="car-foto">
+                    <h3>BMW 320I M SPORT</h3>
+                    <p class="text-ket">Sedan sport 1.6L turbo 184 HP, handling khas BMW...</p>
+                    <p class="price">RP 1,085,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmw320i">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sedan hybrid 900-2m" data-id="car-36"
+                    data-name="BMW 530E M SPORT" data-price="1565000000">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=500" alt="car-foto">
+                    <h3>BMW 530E M SPORT</h3>
+                    <p class="text-ket">Sedan plug-in hybrid, bensin + listrik 292 HP, irit banget...</p>
+                    <p class="price">RP 1,565,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmw530e">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="sedan hybrid 900-2m" data-id="car-37"
+                    data-name="BMW I4 EDRIVE40" data-price="1750000000">
+                    <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=500" alt="car-foto">
+                    <h3>BMW I4 EDRIVE40</h3>
+                    <p class="text-ket">Sedan listrik murni, 340 HP, jarak tempuh 590 KM...</p>
+                    <p class="price">RP 1,750,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmwi4">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mobilkeluarga hybrid 2m-100m" data-id="car-38"
+                    data-name="BMW IX XDRIVE50" data-price="2350000000">
+                    <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=500" alt="car-foto">
+                    <h3>BMW IX XDRIVE50</h3>
+                    <p class="text-ket">SUV listrik keluarga, 523 HP, interior futuristik...</p>
+                    <p class="price">RP 2,350,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmwix">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mobilkeluarga hybrid 2m-100m" data-id="car-39"
+                    data-name="BMW XM HYBRID" data-price="4250000000">
+                    <img src="https://images.unsplash.com/photo-1605515298946-d664fc23fe19?w=500" alt="car-foto">
+                    <h3>BMW XM HYBRID</h3>
+                    <p class="text-ket">SUV hybrid V8 + listrik 748 HP, paling buas dari BMW M...</p>
+                    <p class="price">RP 4,250,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="bmwxm">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mobilkeluarga hybrid 150-900jt" data-id="car-40"
+                    data-name="TOYOTA INNOVA ZENIX HYBRID" data-price="625000000">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=500" alt="car-foto">
+                    <h3>TOYOTA INNOVA ZENIX HYBRID</h3>
+                    <p class="text-ket">Mobil keluarga sejuta umat, hybrid 2.0L irit 1:20, 7 seater...</p>
+                    <p class="price">RP 625,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="zenix">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mobilkeluarga hybrid 900-2m" data-id="car-41"
+                    data-name="TOYOTA ALPHARD HYBRID" data-price="1650000000">
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=500" alt="car-foto">
+                    <h3>TOYOTA ALPHARD HYBRID</h3>
+                    <p class="text-ket">MPV sultan, hybrid 2.5L, captain seat, nyaman kayak pesawat...</p>
+                    <p class="price">RP 1,650,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="alphard">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mobilkeluarga hybrid 150-900jt" data-id="car-42"
+                    data-name="HONDA CR-V HYBRID" data-price="825000000">
+                    <img src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?w=500" alt="car-foto">
+                    <h3>HONDA CR-V HYBRID</h3>
+                    <p class="text-ket">SUV keluarga hybrid 2.0L 207 HP, irit dan bertenaga...</p>
+                    <p class="price">RP 825,000,000.00</p>
+                    <div class="card-buttons">
+                        <button class="detail-ket" data-detail="crvhybrid">DETAIL NYA DI SINI...</button>
+                        <button class="btn-add-keranjang">MASUKKAN KERANJANG</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HALAMAN ABOUT -->
+        <section id="about-page" class="page-section">
+            <div class="info-card">
+                <h1>Tentang Kami</h1>
+                <p>Selamat datang di platform eksklusif kami. Kami menyediakan produk kendaraan mewah dan sport pilihan
+                    berkualitas tinggi dengan pelayanan kelas dunia untuk kepuasan otomotif Anda.</p>
+            </div>
+        </section>
+
+        <!-- DONGO -->
+        <section id="dongo-page" class="page-section">
+            <div class="info-card">
+                <h1 style="color: var(--merah-sport);">NGOTAK BEGO!</h1>
+                <p>LU KIRA ADA MOBIL HARGA SEJUTA?? RONGSOKAN ADA MAU?.</p>
+            </div>
+        </section>
+
+        <!-- HALAMAN VISI MISI -->
+        <section id="visi-misi-page" class="page-section">
+            <div class="info-card">
+                <h1>Visi & Misi</h1>
+                <h3>Visi</h3>
+                <p>Mengembangkan aplikasi dan web serta keamanan web ini dengan baik.</p>
+                <br>
+                <h3>Misi</h3>
+                <ul style="padding-left: 20px;">
+                    <li>Menghadirkan beragam logic yang sangat bikin puyeng.</li>
+                    <li>Memberikan pengalaman yang sangat tak terlupakan.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- HALAMAN DETAIL PRODUK (DYNAMIC SPA VIEW) -->
+        <section id="ket-page" class="page-section">
+            <div class="info-card">
+                <button id="btnBackToHome" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Kembali ke
+                    Home</button>
+                <h1 id="detailTitle">NAMA PRODUK</h1>
+                <div class="detail-content">
+                    <img id="detailImg" src="" alt="Detail Mobil" class="detail-image">
+                    <p id="detailPrice" class="detail-price-tag">RP 0</p>
+                    <p id="detailDescription" class="detail-text"></p>
+                    <button id="detailAddCartBtn" class="btn-add-keranjang" style="margin-top: 20px;">MASUKKAN
+                        KERANJANG</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOATING CART BUTTON -->
+        <a href="keranjang.html" class="floating-cart" title="Lihat Keranjang">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </a>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2026 WHITE.WEB. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

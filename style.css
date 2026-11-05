@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-utama: #0A0A0B;
+  --bg-kedua: #111113;
+  --bg-card: #17171A;
+  --bg-card-hover: #1E1E22;
+  --garis: #26262B;
+
+  --emas: #C6A15B;
+  --emas-terang: #E8C87E;
+  --emas-gelap: #9A7A3A;
+
+  --merah-sport: #D90429;
+  --hijau-sukses: #25D366;
+  --biru-info: #2D9CDB;
+
+  --teks-putih: #FFFFFF;
+  --teks-abu: #A1A1AA;
+  --teks-gelap: #0A0A0B;
+  --teks-emas: #C6A15B;
+
+  --font-judul: 'Bebas Neue', sans-serif;
+  --font-mewah: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --radius-kecil: 8px;
+  --radius-sedang: 14px;
+  --radius-besar: 22px;
+  --radius-bulat: 50%;
+
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-emas: 0 0 25px rgba(198, 161, 91, 0.25);
+  --shadow-tombol: 0 8px 20px rgba(198, 161, 91, 0.35);
+
+  --transisi: all 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-utama);
+  color: var(--teks-putih);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR & HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-card);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--garis);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+}
+
+.brand {
+  font-family: var(--font-mewah);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--emas-terang);
+  letter-spacing: 1px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--emas-terang);
+  border-radius: 2px;
+  transition: var(--transisi);
+}
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--teks-abu);
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: var(--transisi);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--emas-terang);
+}
+
+/* KONTEN UTAMA & SECTION */
+.content-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
+}
+
+.info-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--garis);
+  border-radius: var(--radius-sedang);
+  padding: 30px;
+  box-shadow: var(--shadow-card);
+}
+
+.info-card h1 {
+  font-family: var(--font-judul);
+  font-size: 2.5rem;
+  color: var(--emas-terang);
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.info-card p, .info-card li {
+  color: var(--teks-abu);
+  line-height: 1.6;
+}
+
+/* FILTER & SEARCH */
+.filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+#searchInput {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--garis);
+  color: var(--teks-putih);
+  border-radius: var(--radius-kecil);
+  outline: none;
+  transition: var(--transisi);
+}
+
+#searchInput:focus {
+  border-color: var(--emas);
+  box-shadow: 0 0 10px rgba(198, 161, 91, 0.2);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-filter {
+  padding: 8px 16px;
+  border: 1px solid var(--garis);
+  background-color: var(--bg-kedua);
+  color: var(--teks-abu);
+  border-radius: var(--radius-kecil);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transisi);
+}
+
+.btn-filter:hover, .btn-filter.active {
+  background-color: var(--emas);
+  color: var(--teks-gelap);
+  border-color: var(--emas-terang);
+}
+
+/* PRODUCT GRID & CARD */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--garis);
+  border-radius: var(--radius-sedang);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transisi);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--emas-gelap);
+  box-shadow: var(--shadow-card);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-kecil);
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-family: var(--font-judul);
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  color: var(--teks-putih);
+  margin-bottom: 8px;
+}
+
+.text-ket {
+  color: var(--teks-abu);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.price {
+  color: var(--emas-terang);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-ket, .btn-add-keranjang, .btn-back {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: var(--radius-kecil);
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transisi);
+}
+
+.detail-ket {
+  background-color: transparent;
+  color: var(--teks-abu);
+  border: 1px solid var(--garis);
+}
+
+.detail-ket:hover {
+  border-color: var(--emas);
+  color: var(--teks-putih);
+}
+
+.btn-add-keranjang {
+  background-color: var(--emas);
+  color: var(--teks-gelap);
+}
+
+.btn-add-keranjang:hover {
+  background-color: var(--emas-terang);
+  box-shadow: var(--shadow-tombol);
+}
+
+.btn-back {
+  background-color: var(--bg-kedua);
+  color: var(--teks-putih);
+  border: 1px solid var(--garis);
+  width: auto;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+}
+
+.btn-back:hover {
+  background-color: var(--garis);
+}
+
+/* HALAMAN DETAIL */
+.detail-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-sedang);
+  margin: 15px 0;
+}
+
+.detail-price-tag {
+  font-size: 1.5rem;
+  color: var(--emas-terang);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* FLOATING CART BUTTON */
+.floating-cart {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--emas);
+  color: var(--teks-gelap);
+  border-radius: var(--radius-bulat);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: var(--shadow-tombol);
+  z-index: 9999;
+  text-decoration: none;
+  transition: var(--transisi);
+}
+
+.floating-cart:hover {
+  transform: scale(1.1);
+  background-color: var(--emas-terang);
+}
+
+.cart-count {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: var(--merah-sport);
+  color: white;
+  font-size: 12px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* TOAST NOTIFIKASI */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: var(--hijau-sukses);
+  color: #fff;
+  text-align: center;
+  border-radius: var(--radius-kecil);
+  padding: 12px 20px;
+  position: fixed;
+  z-index: 10000;
+  right: 20px;
+  top: 80px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s, top 0.3s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  top: 90px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--garis);
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-bottom p {
+  color: var(--teks-abu);
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .nav-container {
+    position: relative;
+    justify-content: center;
+  }
+
+  .brand {
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--garis);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
+
+  .nav-menu.open {
+    max-height: 250px;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 15px;
+    align-items: center;
+  }
+}

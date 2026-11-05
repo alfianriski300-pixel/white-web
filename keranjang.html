@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang Belanja - THE WHITE WEB</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="keranjang.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <div class="brand"><em>WHITE.WEB</em></div>
+      <a href="index.html" class="btn-back-home"><i class="fa-solid fa-house"></i> Kembali ke Home</a>
+    </div>
+  </header>
+
+  <main class="content-container">
+    <div class="cart-wrapper">
+      <h2>Keranjang Belanja Anda</h2>
+
+      <!-- PILIH SEMUA CHECKBOX -->
+      <div class="cart-select-all" id="selectAllWrapper">
+        <input type="checkbox" id="selectAllCheckbox">
+        <label for="selectAllCheckbox">Pilih Semua Produk</label>
+      </div>
+
+      <!-- LIST ITEM KERANJANG -->
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- Generasi via JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <!-- CART FOOTER FIXED BOTTOM -->
+  <div class="cart-footer">
+    <div class="cart-footer-container">
+      <div class="cart-total-info">
+        <span>Total Pembayaran:</span>
+        <h3 id="grandTotal">RP 0.00</h3>
+      </div>
+      <button id="btnCheckoutWA" class="btn-checkout">
+        <i class="fa-brands fa-whatsapp"></i> Checkout via WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <script src="keranjang.js"></script>
+</body>
+
+</html>
